@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cipher_squad_innovathon/static/css/main.e6c13ad2.css",
+    "main.js": "/cipher_squad_innovathon/static/js/main.fb2afacd.js",
+    "static/media/logo.png": "/cipher_squad_innovathon/static/media/logo.cba940861dd8aabf4a90.png",
+    "index.html": "/cipher_squad_innovathon/index.html",
+    "main.e6c13ad2.css.map": "/cipher_squad_innovathon/static/css/main.e6c13ad2.css.map",
+    "main.fb2afacd.js.map": "/cipher_squad_innovathon/static/js/main.fb2afacd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.fb2afacd.js"
+  ]
+}
