@@ -27,8 +27,13 @@ const ContentContainer = styled.div`
 
 const Logo = styled.img`
   width: 120px;
+  height: 120px; /* Ensure height matches width for a perfect circle */
+  margin-left: 25px;
   margin-bottom: 2rem;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures the image scales properly within the circle */
 `;
+
 
 const MainHeading = styled.h1`
   font-size: 2.5rem;
@@ -72,11 +77,11 @@ const LeftComponent = () => {
   return (
     <StyledLeftComponent>
       <ContentContainer>
-        <Logo src={logo} alt="CodeDeck Logo" />
+        <Logo src={logo} alt="CodeOn Logo" />
         <MainHeading>
-          <span>Code</span>Deck
+          <span>Code</span>On
         </MainHeading>
-        <SubHeading>Code. Compile. Debug.</SubHeading>
+        <SubHeading>Build - Test - Refine</SubHeading>
       </ContentContainer>
       <AddNewButton
         onClick={() =>
@@ -90,7 +95,7 @@ const LeftComponent = () => {
           })
         }
       >
-        <FaPlus /> Create New Playground
+        <FaPlus /> Create New Repository
       </AddNewButton>
     </StyledLeftComponent>
   );

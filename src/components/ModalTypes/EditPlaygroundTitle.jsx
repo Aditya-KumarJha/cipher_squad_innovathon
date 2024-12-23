@@ -24,7 +24,7 @@ const EditPlaygroundTitle = () => {
         <button onClick={() => {
           editPlaygroundTitle(folderId, cardId, playgroundTitle)
           closeModal()
-        }}>Update Title</button>
+        }}>Update Name</button>
       </Input>
     </>
   )

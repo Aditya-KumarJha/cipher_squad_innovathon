@@ -15,7 +15,7 @@ function App() {
           <GlobalStyle />
           <Routes>
             <Route path="/" element={<Homes />} />
-            <Route path="/homes" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/playground/:folderId/:playgroundId" element={<Playground />} />
             <Route path="*" element={<Error404 />} />
           </Routes>

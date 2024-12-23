@@ -104,8 +104,12 @@ const CardContent = styled.div`
 
 const Logo = styled.img`
   width: 40px;
+  height: 40px; /* Ensure height matches width for a perfect circle */
   margin-right: 1rem;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures the image scales properly within the circle */
 `;
+
 
 const Language = styled.span`
   font-size: 0.8rem;
@@ -136,7 +140,7 @@ const RightComponent = () => {
     <StyledRightComponent>
       <Header>
         <Heading size="large">
-          My <span>Playground</span>
+          My <span>Repository</span>
         </Heading>
         <AddButton
           onClick={() =>
@@ -190,7 +194,7 @@ const RightComponent = () => {
                   })
                 }
               >
-                <FaPlus /> New Playground
+                <FaPlus /> New Repository
               </AddButton>
             </FolderIcons>
           </Header>

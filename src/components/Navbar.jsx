@@ -1,18 +1,25 @@
-'use client'
-
-import Link from "next/link"
-import { Code2, ChevronDown, Search, Menu } from 'lucide-react'
-import { Button } from "./ui/button"
-import { motion } from "framer-motion"
+import { useState } from 'react';  // Add useState import
+import { Link } from "react-router-dom";
+import { Code2, ChevronDown, Search, Menu } from 'lucide-react';
+import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
-import { Input } from "./ui/input"
+} from "./ui/dropdown-menu";
+import { Input } from "./ui/input";
+import AuthModal from './authmodal';  // Import AuthModal with correct path
 
 export default function NavBar() {
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [authType, setAuthType] = useState('signin');
+
+  const handleAuthClick = (type) => {
+    setAuthType(type)
+    setShowAuthModal(true)
+  }
   return (
     <motion.nav 
       initial={{ y: -100 }}
@@ -22,7 +29,7 @@ export default function NavBar() {
     >
       <div className="flex h-16 items-center px-4 max-w-screen-2xl mx-auto">
         <div className="flex items-center space-x-8">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2"> {/* Use `to` for Link */}
             <motion.div
               whileHover={{ rotate: 180 }}
               transition={{ duration: 0.3 }}
@@ -105,7 +112,10 @@ export default function NavBar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.7 }}
           >
-            <Button variant="ghost" size="sm" className="hidden md:flex">
+            <Button 
+              variant="ghost" 
+              onClick={() => handleAuthClick('signin')}
+            >
               Sign in
             </Button>
           </motion.div>
@@ -114,7 +124,11 @@ export default function NavBar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.9 }}
           >
-            <Button size="sm" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600">
+            <Button 
+              variant="default"
+              onClick={() => handleAuthClick('signup')}
+              className="bg-white text-black hover:bg-gray-200"
+            >
               Sign up
             </Button>
           </motion.div>
@@ -123,7 +137,12 @@ export default function NavBar() {
           </Button>
         </div>
       </div>
-    </motion.nav>
-  )
-}
 
+      <AuthModal 
+        isOpen={showAuthModal} 
+        onClose={() => setShowAuthModal(false)}
+        type={authType}
+      />
+    </motion.nav>
+  );
+}
