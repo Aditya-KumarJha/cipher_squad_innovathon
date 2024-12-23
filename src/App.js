@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Homes from './screens/homes'; // Capitalized 'Homes'
 import Home from './screens/Home';
 import Playground from './screens/Playground';
 import Error404 from './screens/Error404';
@@ -13,7 +14,8 @@ function App() {
         <BrowserRouter>
           <GlobalStyle />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Homes />} />
+            <Route path="/homes" element={<Home />} />
             <Route path="/playground/:folderId/:playgroundId" element={<Playground />} />
             <Route path="*" element={<Error404 />} />
           </Routes>

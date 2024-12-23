@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+// Remove the unused styled import
+// import styled from 'styled-components'
 // npm i @uiw/react-codemirror
 import CodeMirror from '@uiw/react-codemirror'
-// npm i @uiw/codemirror-theme-bespin @uiw/codemirror-theme-duotone @uiw/codemirror-theme-dracula @uiw/codemirror-theme-github @uiw/codemirror-theme-xcode @uiw/codemirror-theme-vscode @uiw/codemirror-theme-okaidia
+// npm i @uiw/codemirror-theme-bespin @uiw/codemirror-theme-duotone @uiw/codemirror-theme-dracula @uiw/codemirror-theme-github @uiw/codemirror-theme-xcode @uiw/codemirror-theme-vscode @uiw/codemirror-theme-okaidia'
 
 // theme
 import { githubDark, githubLight } from '@uiw/codemirror-theme-github'

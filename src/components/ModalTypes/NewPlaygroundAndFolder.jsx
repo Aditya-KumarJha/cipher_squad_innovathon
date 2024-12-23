@@ -57,7 +57,7 @@ const NewPlaygroundAndFolder = () => {
   return (
     <>
       <Header>
-        <h2>Create New Playground & Create New Folder</h2>
+        <h2>Create New Repository & Create New Folder</h2>
         <CloseButton onClick={() => closeModal()}>
           <IoCloseSharp />
         </CloseButton>
@@ -78,7 +78,7 @@ const NewPlaygroundAndFolder = () => {
         <button onClick={() => {
           addPlaygroundAndFolder(folderName, playgroundName, language.label)
           closeModal();
-        }}> Create Playground </button>
+        }}> Create Repository </button>
       </InputWithSelect>
     </>
   )
