@@ -1,4 +1,4 @@
-# Code Deck | An Online IDE
+# CodeON | An Online IDE
 
 ## Demo
 
